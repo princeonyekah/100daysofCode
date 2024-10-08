@@ -22,3 +22,22 @@ for(const name of invitee){
 // Print a second set of invitation messages, one for each person who is still in your list.
 
 
+let invitees = ["Angela", "Osunlola", "Jimoh"]
+
+invitees.forEach(function(invite){
+    console.log(invite)
+})
+
+absent = "Osunlola"
+newInvite = "Patricia"
+console.log(`${absent} can't make it to the dinner`)
+
+invitees[invitees.indexOf(absent)] = newInvite
+
+for(const invitee of invitees){
+    console.log(invitee)
+}
+
+invitees.forEach(function(invite){
+    console.log(invite)
+})
