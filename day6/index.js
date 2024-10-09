@@ -37,11 +37,26 @@ invitees.push("Gabriel")
 
 console.log(invitees)
 
+invitees.forEach(function(invite){
+    console.log(`${invite}, you are invited to attend the dinner.`)
+})
+
 // Q17 - Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
 
 // Start with your program from Exercise 16. Add a new line that prints a message saying that you can invite only two people for dinner.
 
+console.log("We can only invite two persons for dinner")
+
 // Remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+
+if (invitees.length > 2) {
+    // Remove elements until there are 2 left
+    while (invitees.length > 2) {
+        invitees.pop(); // Remove the last element
+    }
+}
+
+console.log(invitees)
 
 // Print a message to each of the two people still on your list, letting them know they’re still invited.
 
