@@ -77,16 +77,35 @@ console.log(invitees)
 
 // Store the locations in a array. Make sure the array is not in alphabetical order.
 
+locations = ["Beach","Park", "Netflix","Jaekel House","Eiffel Tower"]
+
 // Print your array in its original order.
+
+locations.forEach(function(place){
+    console.log(place)
+})
 
 // Print your array in alphabetical order without modifying the actual list.
 
-// Show that your array is still in its original order by printing it.
+sortedLocation = [...locations] //copy an array
+sortedLocation.sort()
+sortedLocation.forEach(function(place){
+    console.log(place)
+})
 
+
+// Show that your array is still in its original order by printing it.
+console.log(locations)
 // Print your array in reverse alphabetical order without changing the order of the original list.
 
-// Show that your array is still in its original order by printing it again.
+reversedLocation = [...locations]
+reversedLocation.sort().reverse()
+reversedLocation.forEach(function(place){
+    console.log(place)
+})
 
+// Show that your array is still in its original order by printing it again.
+console.log(locations)
 // Reverse the order of your list. Print the array to show that its order has changed.
 
 // Reverse the order of your list again. Print the list to show it’s back to its original order.
