@@ -27,9 +27,15 @@ invitees.forEach(function(invite){
 
 console.log("We found a bigger table")
 
-invitees.unshift("Yemisi") //adds element to the beginning 
+invitees.unshift("Yemisi") //adds element to the beginning
 console.log(invitees)
 
+invitees.splice(2,0,"Divine")
+console.log(invitees) //puts the element at the middle
+
+invitees.push("Gabriel")
+
+console.log(invitees)
 
 // Q17 - Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
 
