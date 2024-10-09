@@ -52,7 +52,8 @@ console.log("We can only invite two persons for dinner")
 if (invitees.length > 2) {
     // Remove elements until there are 2 left
     while (invitees.length > 2) {
-        invitees.pop(); // Remove the last element
+        removedInvite = invitees.pop(); // Remove the last element
+        console.log(`We are sorry we can't invite you, ${removedInvite}`)
     }
 }
 
@@ -60,7 +61,17 @@ console.log(invitees)
 
 // Print a message to each of the two people still on your list, letting them know they’re still invited.
 
+for (invite of invitees){
+    console.log(`${invite}, you are invited.`)
+}
+
 // Remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+
+while(invitees.length > 0){
+    invitees.pop();
+}
+
+console.log(invitees)
 
 // Q18 - Seeing the World: Think of at least five places in the world you’d like to visit.
 
