@@ -107,10 +107,14 @@ reversedLocation.forEach(function(place){
 // Show that your array is still in its original order by printing it again.
 console.log(locations)
 // Reverse the order of your list. Print the array to show that its order has changed.
+console.log(locations.reverse())
 
 // Reverse the order of your list again. Print the list to show it’s back to its original order.
+console.log(locations.reverse())
 
 // Sort your array so it’s stored in alphabetical order. Print the array to show that its order has been changed.
+console.log(locations.sort())
 
-// Sort to change your array so it’s stored in reverse alphabetical order. Print the list to show that its order has changed. -->
+// Sort to change your array so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
+console.log(locations.reverse())
 
