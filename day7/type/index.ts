@@ -23,4 +23,4 @@ var books: Book = {
     yearPub: 1937
 };
 
-console.log(books);
+console.log(`Book Info: ${books.title} by ${books.author}, published in ${books.yearPub}`);

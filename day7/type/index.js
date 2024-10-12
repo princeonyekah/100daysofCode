@@ -11,4 +11,4 @@ var books = {
     author: "J.R.R. Tolkien",
     yearPub: 1937
 };
-console.log(books);
+console.log("Book Info: ".concat(books.title, " by ").concat(books.author, ", published in ").concat(books.yearPub));
