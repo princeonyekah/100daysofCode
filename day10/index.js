@@ -59,4 +59,14 @@ if (favorite_fruits.includes("Grapes")) {
 
 // Otherwise, print a generic greeting, such as Hello Eric, thank you for logging in again.
 
+const username = ['admin','lizzy','mabel','onyekah','faith']
+
+username.forEach(function(element){
+if(element == 'admin'){
+    console.log(`Hello ${element}, would you like to see a status report?`)
+} else {
+    console.log(`Hello ${element}, thank you for logging in again`)
+}
+}
+);
 
