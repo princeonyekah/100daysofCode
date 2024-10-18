@@ -5,19 +5,19 @@
 // Remove all of the usernames from your array, and make sure the correct message is printed.
 
 
-// const username = []
+const username = []
 
-// if (username.length === 0) {
-//     console.log("We need to find some users");
-// } else(username.forEach(function(element){
-//     if(element == 'admin'){
-//        console.log(`Hello ${element}, would you like to see a status report?`)
-//    } else {
-//        console.log(`Hello ${element}, thank you for logging in again`)
-//    }
-//    }
-//    )
-// )
+if (username.length === 0) {
+    console.log("We need to find some users");
+} else(username.forEach(function(element){
+    if(element == 'admin'){
+       console.log(`Hello ${element}, would you like to see a status report?`)
+   } else {
+       console.log(`Hello ${element}, thank you for logging in again`)
+   }
+   }
+   )
+)
 
 
 // Q32 - Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
@@ -30,20 +30,20 @@
 
 // Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted.
 
-// const current_users = ["ruth", "Love","kendrick","paul","Matthew2"]
+const current_users = ["ruth", "Love","kendrick","paul","Matthew2"]
 
-// const new_users = ["giddy","gbriel","paul","ruth","Kunle"]
+const new_users = ["giddy","gbriel","paul","ruth","Kunle"]
 
-// new_users.forEach(newUser => {
-// const exists = current_users.some(function(oldUsers){
-//     return oldUsers.toLowerCase() === newUser.toLowerCase()
-// })
-// if (exists) {
-//     console.log(`You cannot use the username: ${newUser}.`);
-// } else {
-//     console.log(`You can proceed: ${newUser}`);
-// }
-// });
+new_users.forEach(newUser => {
+const exists = current_users.some(function(oldUsers){
+    return oldUsers.toLowerCase() === newUser.toLowerCase()
+})
+if (exists) {
+    console.log(`You cannot use the username: ${newUser}.`);
+} else {
+    console.log(`You can proceed: ${newUser}`);
+}
+});
 
 
 // Q33 - Ordinal Numbers: Ordinal numbers indicate their position in a array, such as 1st or 2nd. Most ordinal numbers end in th, except 1, 2, and 3.
