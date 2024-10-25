@@ -22,4 +22,21 @@ console.log(make_albums("Burna Boy","Love Damini"))
 
 // Q41 - Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician in the array.
 
+magician_name = ["harry","potter","jane","julius","Lady Peril"]
+
+const show_magicians = (magician_name) =>{
+    magician_name.forEach(element => {
+        console.log(element)
+    });
+
+}
+show_magicians(magician_name)
+
 // Q42 - Great Magicians: Start with a copy of your program from Exercise 39. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
+
+const make_great = (magician_name)=>{
+    magician_name.forEach(element => {
+        console.log(`The Great ${element}`)
+    });
+}
+make_great(magician_name)
