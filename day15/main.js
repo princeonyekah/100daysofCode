@@ -50,4 +50,25 @@ console.log(`You have ordered ${new_item.join(',')}.`)
 
 sandwich_condiments("sugar",'flour')
 
+
 // Q45 - Cars: Write a function that stores information about a car in a Object. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly.
+
+const car_details = (manufacturer, model, ...args) =>{
+    const carInfo = {
+        manufacturer: manufacturer,
+        model, model
+    }
+
+ // Iterate over the arguments and add them to the carInfo object
+ args.forEach(arg => {
+    const [key, value] = arg;
+    carInfo[key] = value;
+});
+
+return carInfo;
+}
+
+console.log(car_details("Toyota", 2207))
+
+const myCar = car_details('Toyota', 'Camry',["color", "blue"]);
+console.log(myCar);
