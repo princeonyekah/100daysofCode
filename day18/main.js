@@ -43,13 +43,13 @@ console.log(skills);
 
 // Q54 - Making Flexible Object Keys: Learn how to set up a list where you can change the name of each section based on what you need at that moment, like adjusting labels based on user choice
 
+function flexibleObjKey(key, value){
+    let flexibleObjKey = {}
 
-const dog = {
-    pet1:"Roger",
-    pet2:"Bristle"
+    flexibleObjKey[key] = value
+
+    return flexibleObjKey
 }
 
-
-dog["pet1"] = "Logos"
-
-console.log(dog.pet1)
+const palace = flexibleObjKey("Name","Princewill")
+console.log(palace)

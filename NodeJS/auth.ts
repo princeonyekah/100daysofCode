@@ -6,12 +6,14 @@ export const comparePasswords = (password, hash) =>{
     return bcrypt.compare(password, hash)
 }
 
-export const hasPassword = (password)=> {
+export const hashPassword = (password)=> {
     return bcrypt.hash(password, 5)
 }
 
 export const createJWT = (user) => {
-const token = jwt.sign({id: user.id, username:user.username},process.env.JWT_SECRET)
+const token = jwt.sign({id: user.id,
+     username:user.username},
+     process.env.JWT_SECRET)
 }
 
 export const protect = (req, res, next) =>{
@@ -23,7 +25,7 @@ export const protect = (req, res, next) =>{
         return
     }
 
-    const [,token] = bearer.split('')
+    const [, token] = bearer.split(' ')
     if(!token){
         res.status(401)
         res.json({message:'not valid token'})
