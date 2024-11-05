@@ -13,6 +13,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// datasource db {
+//   provider = "postgresql"
+//   url      = "postgresql://apidesign_mcdj_user:03EMfsGVjpBC77TIePmFi1N2jOjDekL0@dpg-csj8k3tsvqrc73epglog-a.oregon-postgres.render.com/apidesign_mcdj"
+// }
 model User {
   id        String    @id @default(uuid())
   username  String    @unique
