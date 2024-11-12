@@ -35,5 +35,4 @@ function longDivision (num1: number, num2: number):{quotient:number,remainder:nu
     }
 }
 
-
 console.log(longDivision(10,3))
