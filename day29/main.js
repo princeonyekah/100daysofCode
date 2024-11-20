@@ -11,4 +11,20 @@ console.log(positionString("I love to eat rice", "to"))
 
 // Question 86: Checking for Text Presence: Create a function that checks if the word "JavaScript" is present in a given string. It should return true if found, otherwise false.
 
+function textPresence(sentence,word){
+    if(sentence.includes(word)){
+        return true
+    }
+    return false
+}
+
+
+console.log(textPresence("I love dogs", "f"))
+
 // Question 87: Extracting a Substring: Demonstrate how to extract the first 10 characters from a string.
+
+let sentence = "John can cook rice and beans."
+
+let result = sentence.substring(0,10)
+
+console.log(result)
