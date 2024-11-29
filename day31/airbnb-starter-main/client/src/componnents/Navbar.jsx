@@ -142,7 +142,7 @@ const TextButton = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({setOpenAuth, openAuth}) => {
 
   const [isOpen, setIsOpen] = useState(false)
   return (
@@ -168,8 +168,8 @@ const Navbar = () => {
                 gap:"12px",
 
                }}>
-               <Button type="secondary" text="SignUp" small/>
-               <Button  text="SignIn" small/>
+               <Button type="secondary" text="SignUp" small onClick={()=> setOpenAuth(!openAuth)}/>
+               <Button  text="SignIn" small onClick={()=> setOpenAuth(!openAuth)}/>
                </div>
           </MobileMenu>
         )}
@@ -181,7 +181,7 @@ const Navbar = () => {
         </NavItems>
 
         <ButtonContainer>
-          <Button type="secondary" text="SignIn" small/>
+          <Button type="secondary" text="SignIn" small onClick={()=> setOpenAuth(!openAuth)}/>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>
