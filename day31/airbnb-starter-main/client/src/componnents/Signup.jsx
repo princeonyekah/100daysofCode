@@ -27,7 +27,31 @@ const Span = styled.div`
 `;
 
 const Signup = () => {
-  return <div>SignUp</div>;
+  return (
+    <Container>
+      <div>
+        <Title> Welcome to Airbnb</Title>
+        <Span> Please login with your details here</Span>
+      </div>
+      <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
+        <TextInput
+          label="Full Name"
+          placeholder="Enter your Full Name"
+        />
+         <TextInput
+          label="Email Address"
+          placeholder="Enter your email address"
+        />
+        <TextInput
+          label="Password"
+          placeholder="Enter your password"
+          password
+        />
+
+        <Button text="Sign In" />
+      </div>
+    </Container>
+  );
 };
 
 export default Signup;
