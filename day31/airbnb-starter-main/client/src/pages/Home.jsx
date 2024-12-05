@@ -96,7 +96,42 @@ const SearchButton = styled.div`
 `;
 
 const Home = () => {
-  return <div>Home</div>;
+  const [location,setLocation] = useState("")
+  const [checkInDate,setCheckInDate] = useState("")
+  const [checkOutDate,setCheckOutDate] = useState("")
+  return (
+    <Container>
+      <SearchContainer>
+        <LocationWrapper>
+          <Title>
+            Location
+          </Title>
+          <Desc placeholder="Where are you going" type="text"/>
+        </LocationWrapper>
+
+        <CheckInWrapper>
+          <Title>
+            Check in Date
+          </Title>
+          <Desc placeholder="Start Date" type="date"/>
+        </CheckInWrapper>
+
+        <CheckOutWrapper>
+          <Title>
+            Check out Date
+          </Title>
+          <Desc placeholder="End Date" type="date"/>
+        </CheckOutWrapper>
+        <SearchWrapper>
+          <SearchButton>
+            <SearchRounded sx={{ color:"inherit", fontSize:"30px"}}>
+
+            </SearchRounded>
+          </SearchButton>
+        </SearchWrapper>
+      </SearchContainer>
+    </Container>
+  );
 };
 
 export default Home;

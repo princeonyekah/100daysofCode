@@ -48,7 +48,7 @@ const Signup = () => {
           password
         />
 
-        <Button text="Sign In" />
+        <Button text="Sign Up" />
       </div>
     </Container>
   );
