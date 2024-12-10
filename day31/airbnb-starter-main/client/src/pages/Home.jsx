@@ -96,37 +96,55 @@ const SearchButton = styled.div`
 `;
 
 const Home = () => {
-  const [location,setLocation] = useState("")
-  const [checkInDate,setCheckInDate] = useState("")
-  const [checkOutDate,setCheckOutDate] = useState("")
+  const [location, setLocation] = useState("");
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSearchClick = () => {
+    navigate("/properties", {
+      state: { location, checkInDate, checkOutDate },
+    });
+  };
+
   return (
     <Container>
       <SearchContainer>
         <LocationWrapper>
-          <Title>
-            Location
-          </Title>
-          <Desc placeholder="Where are you going" type="text"/>
+          <Title>Location</Title>
+          <Desc
+            placeholder="Where are you going"
+            type="text"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
         </LocationWrapper>
 
         <CheckInWrapper>
-          <Title>
-            Check in Date
-          </Title>
-          <Desc placeholder="Start Date" type="date"/>
+          <Title>Check in Date</Title>
+          <Desc
+            placeholder="Start Date"
+            type="date"
+            value={checkInDate}
+            onChange={(e) => setCheckInDate(e.target.value)}
+          />
         </CheckInWrapper>
 
         <CheckOutWrapper>
-          <Title>
-            Check out Date
-          </Title>
-          <Desc placeholder="End Date" type="date"/>
+          <Title>Check out Date</Title>
+          <Desc
+            placeholder="End Date"
+            type="date"
+            value={checkOutDate}
+            onChange={(e) => setCheckOutDate(e.target.value)}
+          />
         </CheckOutWrapper>
         <SearchWrapper>
-          <SearchButton>
-            <SearchRounded sx={{ color:"inherit", fontSize:"30px"}}>
-
-            </SearchRounded>
+          <SearchButton onClick = {handleSearchClick}>
+            <SearchRounded
+              sx={{ color: "inherit", fontSize: "30px" }}
+            ></SearchRounded>
           </SearchButton>
         </SearchWrapper>
       </SearchContainer>
