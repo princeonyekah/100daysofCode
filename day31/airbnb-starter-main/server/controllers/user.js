@@ -1,30 +1,37 @@
-import mongoose from "mongoose";
-const UserSchema = new mongoose.UserSchema(
-    {
-        name:{
-            type: String,
-            required:true,
-        },
-        email:{
-            type: String,
-            required:true,
-            unique:true
-        },
-        password:{
-            type:String,
-            required: true,
-        },
-        favourites:{
-            type: [mongoose.Schema.Types.ObjectId],
-            ref:"Properties",
-            default:[]
-        }, bookings:{
-            type: [mongoose.Schema.Types.ObjectId],
-            ref:"Properties",
-            default:[]
-        },
-    },
-    {timestamps:true}
-);
+ import User from "../models/user.js";
+ import properties from "../models/properties.js";
+ import {createError} from "../error.js";
+ import dotenv from "dotenv";
+ import bcrypt from "bcrypt"
+ import jwt from "jsonwebtoken"
 
-export default mongoose.model("User", UserSchema);
+ dotenv.config();
+
+ export const SignUp = async(req, res, next) => {
+    try {
+        const {email, password, name} = req.body;
+        const existinguser = await User.findOne({email}).exec();
+        if (existinguser){
+            return next(createError(409, "Email is already in use"))
+        }
+
+        const salt = bcrypt.genSaltSync(10)
+        const hashedPassword =bcrypt.hashSync(password, salt);
+
+        const user = new User({
+            name,
+            email,
+            password:hashedPassword,
+        })
+
+    } catch (error) {
+        next(error)
+    }
+ };
+ export const SignIn = async(req, res, next) => {
+    try {
+
+    } catch (error) {
+        next(error)
+    }
+ };
